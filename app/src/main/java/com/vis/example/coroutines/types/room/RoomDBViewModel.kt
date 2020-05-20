@@ -1,5 +1,8 @@
 package com.vis.example.coroutines.types.room
 
+import android.content.Context
+import android.net.ConnectivityManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -48,7 +51,7 @@ class RoomDBViewModel(    private val userRepository: UserRepository
 
 
             } catch (e: Exception) {
-                users.postValue(Resource.error("Something Went Wrong", null))
+                users.postValue(Resource.error("Internet Connection not Available", null))
             }
         }
     }
