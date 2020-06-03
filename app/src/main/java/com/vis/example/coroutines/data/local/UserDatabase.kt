@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.vis.example.coroutines.data.local.dao.UserDao
 import com.vis.example.coroutines.data.local.entity.User
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class], version = 2)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao

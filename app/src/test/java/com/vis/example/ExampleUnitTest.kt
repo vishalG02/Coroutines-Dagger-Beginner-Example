@@ -1,4 +1,4 @@
-package com.vis.example.coroutines
+package com.vis.example
 
 import org.junit.Test
 

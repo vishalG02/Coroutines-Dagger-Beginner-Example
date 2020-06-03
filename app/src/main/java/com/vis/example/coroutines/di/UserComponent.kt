@@ -11,7 +11,6 @@ import com.vis.example.coroutines.types.retrofit.single.SingleNetworkCallActivit
 import com.vis.example.coroutines.types.room.RoomDBActivity
 import com.vis.example.coroutines.types.task.onetask.LongRunningTaskActivity
 import com.vis.example.coroutines.types.task.twotasks.TwoLongRunningTasksActivity
-import com.vis.example.coroutines.types.timeout.TimeoutActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -28,7 +27,6 @@ interface UserComponent {
     fun inject(roomDBActivity: RoomDBActivity)
     fun inject(longRunningTaskActivity: LongRunningTaskActivity)
     fun inject(twoLongRunningTasksActivity: TwoLongRunningTasksActivity)
-    fun inject(timeoutActivity: TimeoutActivity)
 
 
 }

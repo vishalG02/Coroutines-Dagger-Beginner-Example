@@ -29,7 +29,7 @@ class NetworkModule {
 
     @Provides
     fun provideBaseUrl(): String {
-        return "https://5e510330f2c0d300147c034c.mockapi.io/"
+        return "https://5ece376e7c528e00167cdcf6.mockapi.io/"
     }
 
 }

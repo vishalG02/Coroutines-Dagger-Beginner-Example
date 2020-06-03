@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.item_layout.view.*
 class UserAdapter(
     private val users: ArrayList<User>
 ) : RecyclerView.Adapter<UserAdapter.DataViewHolder>() {
+    private var listener: ((User) -> Unit)? = null
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
@@ -20,9 +21,12 @@ class UserAdapter(
             Glide.with(itemView.imageViewAvatar.context)
                 .load(user.avatar)
                 .into(itemView.imageViewAvatar)
+
         }
     }
-
+    fun setUserClickListener(listener: (User) -> Unit) {
+        this.listener = listener
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         DataViewHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -33,8 +37,13 @@ class UserAdapter(
 
     override fun getItemCount(): Int = users.size
 
-    override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
-        holder.bind(users[position])
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int)// =
+       // holder.bind(users[position])
+        {
+            val user = users[position]
+            holder.bind(user)
+        }
+
 
     fun addData(list: List<User>) {
         users.addAll(list)

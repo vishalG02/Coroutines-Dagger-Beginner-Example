@@ -5,13 +5,7 @@ import retrofit2.http.GET
 
 interface UserWebService {
 
-    @GET("users")
+    @GET("concepts")
     suspend fun getUsers(): List<ApiUser>
-
-    @GET("more-users")
-    suspend fun getMoreUsers(): List<ApiUser>
-
-    @GET("error")
-    suspend fun getUsersWithError(): List<ApiUser>
 
 }

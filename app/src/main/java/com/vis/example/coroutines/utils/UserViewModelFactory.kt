@@ -11,7 +11,6 @@ import com.vis.example.coroutines.types.retrofit.single.SingleNetworkCallViewMod
 import com.vis.example.coroutines.types.room.RoomDBViewModel
 import com.vis.example.coroutines.types.task.onetask.LongRunningTaskViewModel
 import com.vis.example.coroutines.types.task.twotasks.TwoLongRunningTasksViewModel
-import com.vis.example.coroutines.types.timeout.TimeoutViewModel
 
 class UserViewModelFactory(private val userRepository: UserRepository) :
     ViewModelProvider.Factory {
@@ -29,9 +28,7 @@ class UserViewModelFactory(private val userRepository: UserRepository) :
        if (modelClass.isAssignableFrom(RoomDBViewModel::class.java)) {
            return RoomDBViewModel(userRepository) as T
        }
-       if (modelClass.isAssignableFrom(TimeoutViewModel::class.java)) {
-           return TimeoutViewModel(userRepository) as T
-       }
+
        if (modelClass.isAssignableFrom(TryCatchViewModel::class.java)) {
            return TryCatchViewModel(userRepository) as T
        }

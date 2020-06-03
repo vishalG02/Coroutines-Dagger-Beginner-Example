@@ -13,7 +13,6 @@ import com.vis.example.coroutines.types.retrofit.single.SingleNetworkCallActivit
 import com.vis.example.coroutines.types.room.RoomDBActivity
 import com.vis.example.coroutines.types.task.onetask.LongRunningTaskActivity
 import com.vis.example.coroutines.types.task.twotasks.TwoLongRunningTasksActivity
-import com.vis.example.coroutines.types.timeout.TimeoutActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,9 +37,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
     }
 
-    fun startTimeoutActivity(view: View) {
-        startActivity(Intent(this@MainActivity, TimeoutActivity::class.java))
-    }
 
     fun startTryCatchActivity(view: View) {
         startActivity(Intent(this@MainActivity, TryCatchActivity::class.java))

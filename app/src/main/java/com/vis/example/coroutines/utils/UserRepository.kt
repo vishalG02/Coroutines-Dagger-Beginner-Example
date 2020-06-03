@@ -12,9 +12,9 @@ class UserRepository(private val userDatabase: UserDatabase, private val userWeb
 
     override suspend fun getUsers() = userWebService.getUsers()
 
-    override suspend fun getMoreUsers() = userWebService.getMoreUsers()
+    override suspend fun getMoreUsers() = userWebService.getUsers()
 
-    override suspend fun getUsersWithError() = userWebService.getUsersWithError()
+    override suspend fun getUsersWithError() = userWebService.getUsers()
 
     override suspend fun getUsersFromDb(): List<User> = userDatabase.userDao().getAll()
 

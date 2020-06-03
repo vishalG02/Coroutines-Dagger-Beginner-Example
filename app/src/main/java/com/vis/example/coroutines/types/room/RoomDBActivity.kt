@@ -1,5 +1,7 @@
 package com.vis.example.coroutines.types.room
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast

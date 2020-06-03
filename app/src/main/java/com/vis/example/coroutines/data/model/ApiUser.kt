@@ -7,7 +7,7 @@ data class ApiUser(
     val id: Int = 0,
     @SerializedName("name")
     val name: String = "",
-    @SerializedName("email")
+    @SerializedName("url")
     val email: String = "",
     @SerializedName("avatar")
     val avatar: String = ""

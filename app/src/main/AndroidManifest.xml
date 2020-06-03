@@ -2,17 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vis.example.coroutines">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
         android:name=".di.UserApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.vis.example.coroutines.MainActivity">
+        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,34 +22,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.vis.example.coroutines.types.retrofit.single.SingleNetworkCallActivity"
+            android:name=".types.retrofit.single.SingleNetworkCallActivity"
             android:label="@string/single_network_call" />
         <activity
-            android:name="com.vis.example.coroutines.types.retrofit.series.SeriesNetworkCallsActivity"
+            android:name=".types.retrofit.series.SeriesNetworkCallsActivity"
             android:label="@string/series_network_calls" />
         <activity
-            android:name="com.vis.example.coroutines.types.retrofit.parallel.ParallelNetworkCallsActivity"
+            android:name=".types.retrofit.parallel.ParallelNetworkCallsActivity"
             android:label="@string/parallel_network_calls" />
         <activity
-            android:name="com.vis.example.coroutines.types.room.RoomDBActivity"
+            android:name=".types.room.RoomDBActivity"
             android:label="@string/room_database" />
         <activity
-            android:name="com.vis.example.coroutines.types.timeout.TimeoutActivity"
-            android:label="@string/timeout" />
-        <activity
-            android:name="com.vis.example.coroutines.types.errorhandling.trycatch.TryCatchActivity"
+            android:name=".types.errorhandling.trycatch.TryCatchActivity"
             android:label="@string/try_catch_error" />
         <activity
-            android:name="com.vis.example.coroutines.types.errorhandling.exceptionhandler.ExceptionHandlerActivity"
+            android:name=".types.errorhandling.exceptionhandler.ExceptionHandlerActivity"
             android:label="@string/exception_handler" />
         <activity
-            android:name="com.vis.example.coroutines.types.errorhandling.supervisor.IgnoreErrorAndContinueActivity"
+            android:name=".types.errorhandling.supervisor.IgnoreErrorAndContinueActivity"
             android:label="@string/ignore_error_and_continue" />
         <activity
-            android:name="com.vis.example.coroutines.types.task.onetask.LongRunningTaskActivity"
+            android:name=".types.task.onetask.LongRunningTaskActivity"
             android:label="@string/long_running_task" />
         <activity
-            android:name="com.vis.example.coroutines.types.task.twotasks.TwoLongRunningTasksActivity"
+            android:name=".types.task.twotasks.TwoLongRunningTasksActivity"
             android:label="@string/two_long_running_tasks" />
     </application>
 
